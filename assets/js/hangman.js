@@ -1,15 +1,13 @@
 let countPos = 0;// counter to know if we win
-let countNeg = 0;
-let letterOfTheButton = "";
-let letterOfFailure = "";
+let countNeg = 0; // counter of the fails
+let letterOfTheButton = ""; // var for the value of button
+let letterOfFailure = "";// var for the str with all the failure
 let words = 'hangman';
 
 let wordsArray = words.toUpperCase().split('');
 console.log(wordsArray);
 createSpanForWord(wordsArray);
-let placeLetterArray = document.querySelectorAll(".letter")
-console.log(placeLetterArray);
-
+let placeLetterArray = document.querySelectorAll(".letter"); // array of class (word to think)
 // event on button
 let allButton = document.querySelectorAll('.buttonsOfWords');
 allButton.forEach((button) =>{
@@ -36,6 +34,7 @@ allButton.forEach((button) =>{
             letterOfFailure += letterOfTheButton; // Stock all the letter of failure
             document.querySelector('.failurePart').innerHTML = letterOfFailure;
             countNeg++;
+            document.querySelector('.errorCount span').innerHTML = countNeg;
         }
 
         Win(countPos); //check if we win

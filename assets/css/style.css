@@ -51,6 +51,18 @@ body .game .gamefct {
   max-width: 50%;
 }
 
+body .game .gamefct .errorCount {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: #613960;
+  font-size: 1.5rem;
+}
+
+body .game .gamefct .errorCount span {
+  color: rgba(255, 0, 0, 0.534);
+}
+
 body .game .gamefct .wordsPart {
   min-height: 20vh;
   display: -webkit-box;

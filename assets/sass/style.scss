@@ -31,6 +31,16 @@ body {
             flex-direction: column;
             max-width: 50%;
 
+            .errorCount{
+                position: absolute;
+                top:10%;
+                right:10%;
+                color: $M4;
+                font-size: 1.5rem;
+                span{
+                    color: rgba(255, 0, 0, 0.534);
+                }
+            }
             .wordsPart{
                 min-height: 20vh;
                 display: flex;
