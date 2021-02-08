@@ -23,7 +23,7 @@ allButton.forEach((button) =>{
 
         // if the lettre is good 
         if(wordsArray.includes(letterOfTheButton)) {
-            console.log(letterOfTheButton);
+            button.classList.add('yes');
             // check all value in the wors(in the array)
             for (let i = 0; i < wordsArray.length; i++) {
                 if(wordsArray[i]=== letterOfTheButton){
@@ -32,7 +32,7 @@ allButton.forEach((button) =>{
                 }
             }
         }else{
-            console.log(letterOfTheButton)
+            button.classList.add('no');
             letterOfFailure += letterOfTheButton; // Stock all the letter of failure
             document.querySelector('.failurePart').innerHTML = letterOfFailure;
             countNeg++;
