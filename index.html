@@ -11,8 +11,12 @@
 
 
 <body>
+    <div id="pop-up" hidden>
+        <h1></h1>
+        <button type="button">Replay</button>
+    </div>
     <section class="game">
-        <img src="./assets/img/hangman.svg" alt="hangman">
+        <canvas id="myCanvas" width="600" height="800" style="border:1px solid black"></canvas>
         <div class="gamefct">
             <div class="errorCount"><span>5</span> /5 Erreur</div>
             <div class="wordsPart">
