@@ -1,6 +1,6 @@
 # Hangman
 
-<details open>
+<details close>
   <summary> The mission :</summary>
 
   You have to make a website version of the [hangman](https://en.wikipedia.org/wiki/Hangman_(game)) word game. To do so
