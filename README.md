@@ -1,5 +1,13 @@
 # Hangman
 
+Fait le 09/02/2021 a BeCode.
+
+### Language utilise :
+- Hmtl
+- Sass
+- JavaScript
+- canvas utilisation
+
 <details close>
   <summary> The mission :</summary>
 
