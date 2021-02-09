@@ -61,7 +61,6 @@ buttonPop.addEventListener("click", () =>{
     location.pathname = '/index.html'
 })
 
-
 // =============================== function ==============
 // return an random word
 function chooseOne(chosseOneWord){
