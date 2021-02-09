@@ -58,7 +58,7 @@ allButton.forEach((button) =>{
 // at the end its the replace
 let buttonPop = document.querySelector('#pop-up button');
 buttonPop.addEventListener("click", () =>{
-    location.pathname = '/index.html'
+    location.href = 'https://romainm27.github.io/index.html'
 })
 
 // =============================== function ==============
