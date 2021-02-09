@@ -2,6 +2,8 @@
 
 Fait le 09/02/2021 a BeCode.
 
+
+**Lien direct vers la page : https://romainm27.github.io/Hangman/**
 ### Language utilise :
 - Hmtl
 - Sass
