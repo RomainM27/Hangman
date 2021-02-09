@@ -10,6 +10,7 @@ Fait le 09/02/2021 a BeCode.
 
 <details close>
   <summary> The mission :</summary>
+  
 
   You have to make a website version of the [hangman](https://en.wikipedia.org/wiki/Hangman_(game)) word game. To do so
   try to think the *structure*, the "*backend*" (functionality) and the *frontend*
