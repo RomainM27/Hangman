@@ -14,6 +14,60 @@ body {
   background: linear-gradient(-46deg, white, #d0f5d6);
 }
 
+body .intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .intro .intro-text {
+  color: #e9edf0;
+  font-size: 3rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+body .intro .intro-text .hide {
+  background: black;
+  overflow: hidden;
+  margin: 3rem 0;
+}
+
+body .intro .intro-text .hide span {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: inline-block;
+}
+
+body .slider {
+  background: #613960;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+body canvas {
+  border: 2px dashed #615661;
+  border-radius: 10px;
+}
+
 body #pop-up {
   z-index: 99;
   border-radius: 10%;
@@ -34,10 +88,15 @@ body #pop-up h1 {
   margin-top: 4rem;
 }
 
+body #pop-up p {
+  color: #615661;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 body #pop-up button {
-  position: absolute;
-  top: 70%;
-  left: 40%;
+  margin: 4rem 0 1rem 215.2px;
   font-size: 2rem;
   padding: 1rem 2rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -66,11 +125,6 @@ body .game {
   min-height: 100vh;
 }
 
-body .game img {
-  width: 600px;
-  color: #AEE6A1;
-}
-
 body .game .gamefct {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,15 +142,56 @@ body .game .gamefct {
   max-width: 50%;
 }
 
-body .game .gamefct .errorCount {
+body .game .gamefct h1 {
+  font-size: 3rem;
+  color: #615661;
+  font-style: italic;
+}
+
+body .game .gamefct #info {
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 2%;
+  right: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #615661;
+}
+
+body .game .gamefct #info h2 {
+  margin-left: auto;
+  padding: 2rem 0;
+}
+
+body .game .gamefct #info #winT {
+  margin-left: auto;
+  font-size: 1.4rem;
+}
+
+body .game .gamefct #info #winT span {
+  color: green;
+}
+
+body .game .gamefct #info #loseT {
+  margin-left: auto;
+  font-size: 1.4rem;
+}
+
+body .game .gamefct #info #loseT span {
+  color: rgba(255, 0, 0, 0.534);
+}
+
+body .game .gamefct #info .errorCount {
+  margin-left: auto;
   color: #613960;
   font-size: 1.5rem;
 }
 
-body .game .gamefct .errorCount span {
+body .game .gamefct #info .errorCount span {
   color: rgba(255, 0, 0, 0.534);
 }
 

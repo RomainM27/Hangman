@@ -1,3 +1,11 @@
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 }); // text apear 
+tl.to(".slider", { y: "-100%", duration: 1.5, delay: 0.5 });
+tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+tl.fromTo(".game", { opacity: 0 }, { opacity: 1, duration: 1 });
+
+
 let countPos = 0;// counter to know if we win
 let countNeg = 0; // counter of the fails
 let letterOfTheButton = ""; // var for the value of button
@@ -13,8 +21,18 @@ const chosseOneWord = [
     "hangman"
 ];
 
-let wordsArray = chooseOne(chosseOneWord).toUpperCase().split('');
-console.log(wordsArray);
+let nbrWin = document.getElementById("winT");
+let nbrLose = document.getElementById("loseT");
+// local storage of the number of win/lose
+if (localStorage.winCount){
+    nbrWin.children[0].innerHTML = parseInt(localStorage.winCount);
+}
+if (localStorage.loseCount){
+    nbrLose.children[0].innerHTML = parseInt(localStorage.loseCount);
+}
+const wordChoosenString = chooseOne(chosseOneWord);
+let wordsArray = wordChoosenString.toUpperCase().split('');
+console.log(wordChoosenString);
 createSpanForWord(wordsArray);
 let placeLetterArray = document.querySelectorAll(".letter"); // array of class (word to think)
 
@@ -72,7 +90,11 @@ function chooseOne(chosseOneWord){
 function Win(countPos) {
     if (countPos === wordsArray.length) {
         disabledAllButtons();
-        console.log('win');
+        if (localStorage.winCount){
+            localStorage.winCount = parseInt(localStorage.winCount) + 1;
+        } else{
+            localStorage.winCount = 1;
+        }
         popUpWin();
     }
 }
@@ -81,7 +103,10 @@ function popUpWin(){
     let pop = document.getElementById('pop-up');
     let h1Pop = document.querySelector('#pop-up h1');
     let buttonPop = document.querySelector('#pop-up button');
+    console.log(pop.children[1])
     h1Pop.innerHTML = 'Congratulation ! You are a winner !';
+    let popPString = 
+    pop.children[1].innerHTML = `The word was : ${wordChoosenString}`;
     pop.style.backgroundColor = 'rgb(198, 253, 198)';
     buttonPop.classList.add('win');
     pop.hidden = false;
@@ -91,7 +116,11 @@ function popUpWin(){
 function Lost(countNeg) {
     if (countNeg === 5){
         disabledAllButtons();
-        console.log('lost');
+        if (localStorage.loseCount){
+            localStorage.loseCount = parseInt(localStorage.loseCount) + 1;
+        } else{
+            localStorage.loseCount = 1;
+        }
         popUpLost()
     }
 }
@@ -101,6 +130,7 @@ function popUpLost(){
     let h1Pop = document.querySelector('#pop-up h1');
     let buttonPop = document.querySelector('#pop-up button');
     h1Pop.innerHTML = 'Looooser, you are realy bad !!! AHAH';
+    pop.children[1].innerHTML = `The word was : ${wordChoosenString}`;
     pop.style.backgroundColor = 'rgb(250, 161, 161)';
     buttonPop.classList.add('lost');
     pop.hidden = false;

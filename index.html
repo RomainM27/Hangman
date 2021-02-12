@@ -6,19 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hangman</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous" defer></script>
     <script src="./assets/js/hangman.js" defer></script>
 </head>
 
 
 <body>
+    <div class="intro">
+        <div class="intro-text">
+            <h1 class="hide">
+                <span class="text">The hangman game</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">Have fun and</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">Play.</span>
+            </h1>
+        </div>
+    </div>
+    <div class="slider"></div>
     <div id="pop-up" hidden>
         <h1></h1>
+        <p></p>
         <button type="button">Replay</button>
     </div>
+
     <section class="game">
         <canvas id="myCanvas" width="600" height="800"></canvas>
         <div class="gamefct">
-            <div class="errorCount"><span>0</span> /5 Erreur</div>
+            <h1>Welcome to the Hangman Game !</h1>
+            <div id="info">
+                <h2>Your performance</h2>
+                <div id="winT"><span>0</span> : Total of win</div>
+                <div id="loseT"><span>0</span> : Total of lose</div>
+                <h2>In this game you have</h2>
+                <div class="errorCount"><span>0</span> /5 Mistake</div>
+            </div>
             <div class="wordsPart">
 
             </div>
